@@ -1,0 +1,26 @@
+0. First identified the test cases for data boundaries:
+       i)   when lowest key is entered - lower bound 
+       ii)  when highest key is entered - upper bound
+       iii) when  exact in min max range is entered - matching
+       iv)  when key is in min max range - key in range
+       
+1. First, I tried to understand the given problem data
+2. Built a SpringBoot application using STS, by taking web as the dependency
+3. Created a Service interface with business logic - AppetiteService
+4. Implemented the Services interface using : AppetiteServiceImpl and overriden the interface method(s)
+5. Started solving problem in a TDD approach by creating an abstract AppetiteTest class
+6. Extended the abstract class with the name, AppetiteServiceTest and
+7. Executed each test case failed it first, then re-factored the code and then passed the test
+8. 
+ 
+
+Assumptions:
+1. that the maximum satisfaction computed is assumed to be within min and max satisfaction boundaries, 
+hence cumulative satisfaction is not computed, even though additional time is available to try 
+other dishes  
+2. fraction time and fraction satisfaction is not allowed
+3. My focus was more on TDD than finding the best optimum solution.
+4. As the Service object is available it can be always be injected into the controller, to call its methods
+5. Controller and UI is not required, but can be developed, emphasised more on identifying the right test cases.
+
+      
