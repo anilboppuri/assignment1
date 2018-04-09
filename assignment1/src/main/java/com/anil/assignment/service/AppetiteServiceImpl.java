@@ -26,6 +26,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
+import com.algo.dp.Knapsack;
 
 @Service
 public class AppetiteServiceImpl implements AppetiteService {
@@ -84,24 +85,18 @@ public class AppetiteServiceImpl implements AppetiteService {
 		Integer minKey = Collections.min(keySet);
 		Integer maxKey = Collections.max(keySet);
 		
-		if (inputTime == minKey)
-			return dataMap.get(minKey);
-		if (inputTime == maxKey)
-			return dataMap.get(maxKey);
-		if (keySet.contains(inputTime))
-			return dataMap.get(inputTime);
-		if (inputTime > minKey && inputTime < maxKey) {
-
-			HashMap<Integer, Integer> tempMap = new HashMap<>();
-			for (int key : keySet) {
-
-				if (key < inputTime)
-					tempMap.put(key, dataMap.get(key));
-			}
-			Collection<Integer> tempValues = tempMap.values();
-			return Collections.max(tempValues);
+		
+		
+		Collection<Integer> dataMapValues = dataMap.values();
+		
+		 if (inputTime >0) {
+            System.out.println("<< input time >>" + inputTime);
+            System.out.println("KeySet = " + keySet);
+			Integer[] weights = dataMap.values().toArray(new Integer[dataMap.size()]);
+			Integer[] values = keySet.toArray(new Integer[keySet.size()]);
+			return Knapsack.compute(inputTime, weights, values);
+		
 		}
 		return -1;
 	}
-
 }
