@@ -28,7 +28,7 @@
     
 5. Provide Maximum Satisfaction Value you achieved in your response.
     
-     For given T = 1000 the maximum satisfaction achieved is = 748545                     
+     For given T = 10000 the maximum satisfaction achieved is = 2496882                     
 
 Assumptions:
 1. Fraction time and fraction satisfaction is not allowed

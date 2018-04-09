@@ -14,7 +14,7 @@ public class AppetiteServiceTest extends AppetiteTest {
     @Test
     public void testOptimizer(){
     	
-     	int result =  appetiteService.optimizer(30);
+     	int result =  appetiteService.optimizer(10000);
      	System.out.println(result);
         Assert.assertTrue(result > 0);
     }
