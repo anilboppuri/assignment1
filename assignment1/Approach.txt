@@ -1,0 +1,38 @@
+1. Make sure to setup Spring Boot Application & follow TDD Approach for the Assignment
+
+
+       First identified the test cases for data boundaries:
+       i)   when lowest key is entered - lower bound 
+       ii)  when highest key is entered - upper bound
+       iii) when  exact in min max range is entered - matching
+       iv)  when key is in min max range - key in range
+      
+2. Follow Standard Coding Practices( Naming Conventions, Class/Method/In-line Comments etc..)
+
+        Strictly followed the coding conventions
+
+3. Shared the source code git link 
+
+        Yes
+        
+4. Brief the approach you took to solve the problem and how you achieved the end result
+
+    First I tried to solve the problem with brute force method, tried to apply recursion and get
+    the optimum result, but was not successful
+    
+    This problem was exhibiting the properties of Dynamic programming problem, then I started searching for 
+    then I cam across 1-Knapsack algorithm which gives an optimum way of finding maximum profit or satisfaction
+    from a combination of options
+    
+    Then implemented the 1-Knapsack algorithm to solve the same
+    
+5. Provide Maximum Satisfaction Value you achieved in your response.
+    
+     For given T = 10000 the maximum satisfaction achieved is = 2496882                     
+
+Assumptions:
+1. Fraction time and fraction satisfaction is not allowed
+2. As the Service object is available it can be always be injected into the controller, to call its methods
+
+
+      
